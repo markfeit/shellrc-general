@@ -1,0 +1,5 @@
+#
+# Basic Initialization
+#
+
+unalias -a
