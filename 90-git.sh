@@ -4,22 +4,43 @@
 # Most of these are self-explanatory.
 
 alias gco='git checkout'
-alias gcl='git clone git@github.com:$1.git'
+gcl()
+{
+    git clone "git@github.com:$1.git"
+}
 alias gcv='git commit -v'
 alias gcva='git commit -v -a'
 alias gd='git diff'
 
 # Rename branch:  gmvb OLD-BRANCH-NAME NEW-BRANCH-NAME
-alias gmvb='git branch -m $1 $2 && git push origin :$1 $2 && git push origin -u $2'
+gmvb()
+{
+    git branch -m "$1" "$2" \
+	&& git push origin ":$1" "$2" \
+	&& git push origin -u "$2"
+}
 
 # New Branch:  gnb NEW-BRANCH-NAME
-alias gnb='git checkout -b $1 && git push origin $1 && git branch --set-upstream-to=origin/$1 $1'
+gnb()
+{
+    git checkout -b "$1" \
+	&& git push origin "$1" \
+	&& git branch "--set-upstream-to=origin/$1" "$1"
+}
 
 # Remove local and remote branch
-alias grmb='git branch -d $1 && git push origin --delete $1'
+grmb()
+{
+    git branch -d "$1" \
+	&& git push origin --delete "$1"
+}
 
 # Remove and check out (Revert to last commit)
-alias grco='rm -f $1 && git checkout $1'
+grco()
+{
+    rm -f "$1" \
+	&& git checkout "$1"
+}
 
 alias grh='git reset head'
 alias gsl='git stash list | cat'
