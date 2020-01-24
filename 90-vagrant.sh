@@ -8,3 +8,6 @@ alias vssh="vagrant ssh"
 alias vsshu='vagrant ssh -c "sudo -i -u ${USER}"'
 alias vup="vagrant up"
 alias vupp="vagrant up --provision"
+
+alias vsp="vagrant snapshot push"
+alias vso="vagrant snapshot pop --no-provision"
