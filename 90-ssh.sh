@@ -10,4 +10,6 @@ alias kd="ssh-add -D"
 
 # If keychain is anywhere in the path, use it.
 
-eval `[ -n "$(type -t keychain)" ] && keychain --quiet --eval id_rsa || true`
+eval `[ -n "$(type -t keychain)" ] \
+     && keychain --quiet --eval id_rsa --timeout 600 \
+     || true`
