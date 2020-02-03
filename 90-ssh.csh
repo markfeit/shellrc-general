@@ -2,13 +2,12 @@
 # SSH Configs
 #
 
-# Add SSH keys to the agent for two hours.
-alias ka "ssh-add -t 7200 -A"
-alias kl "ssh-add -l"
-alias kd "ssh-add -D"
-
 set kctype=`type -t keychain`
-eval `[ -n "$kctype" ] \
+eval `[ -n "$kctype" -a -t 0 ] \
     && env SHELL=/bin/csh keychain --eval id_rsa --timeout 600 \
     || true`
 unset kctype
+
+alias ka "keychain id_rsa --timeout 600"
+alias kc "keychain --clear"
+alias kl "keychain --list"
