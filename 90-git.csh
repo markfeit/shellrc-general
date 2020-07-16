@@ -17,7 +17,7 @@ alias gmvb "git branch -m \!:1 \!:2 && git push origin :\!:1 \!:2 && git push or
 alias gnb "git checkout -b \!:1 && git push origin \!:1 && git branch --set-upstream-to=origin/\!:1 \!:1"
 
 # Remove local and remote branch
-alias grmb "git branch -d \!:1 && git push origin --delete \!:1"
+alias grmb "git checkout master && git checkout \!:1 && git checkout master && git branch -d \!:1 && git push origin --delete \!:1"
 
 # Remove and check out (Revert to last commit)
 alias grco "rm -f \!:1 && git checkout \!:1"
