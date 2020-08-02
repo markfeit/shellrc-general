@@ -2,6 +2,8 @@
 # Basic Environment Variables
 #
 
+umask 2
+
 export EDITOR="/usr/bin/emacs"
 export VISUAL="${EDITOR}"
 
