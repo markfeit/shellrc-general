@@ -31,7 +31,10 @@ gnb()
 # Remove local and remote branch
 grmb()
 {
-    git branch -d "$1" \
+    git checkout master \
+        && git checkout "$1" \
+	&& git checkout master \
+	&& git branch -d "$1" \
 	&& git push origin --delete "$1"
 }
 
