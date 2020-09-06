@@ -2,4 +2,4 @@
 # The Hole
 #
 
-alias hh="ls -alt ~hole/ | head"
+alias hh="ls -alt ~/hole/ | head"
