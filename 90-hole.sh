@@ -2,4 +2,5 @@
 # The Hole
 #
 
-alias hh="ls -alt ~/hole/ | head"
+alias hh="ls -halt ~/hole/ | head"
+alias hmv='mv $(ls -t ~/hole/* | head -1)'
