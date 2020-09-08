@@ -25,3 +25,7 @@ setenv LESS -eirMX
 
 # For Spew.
 setenv RULESFILE $HOME/src/spew/headlines/headline
+
+
+alias ll ls -lh"
+alias lll "ls -alht"
