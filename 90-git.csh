@@ -6,8 +6,8 @@
 
 alias gco "git checkout"
 alias gcl "git clone git@github.com:\!:1.git"
-alias gcv "git commit -v"
-alias gcva "git commit -v -a"
+alias gcv 'git commit -v  && printf "\nRemember to push.\n\n"'
+alias gcva 'git commit -v -a && printf "\nRemember to push.\n\n"'
 alias gd "git diff"
 
 # Rename branch:  gmvb OLD-BRANCH-NAME NEW-BRANCH-NAME
