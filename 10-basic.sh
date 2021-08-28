@@ -14,9 +14,11 @@ export LESS="-eirMX"
 export RULESFILE="${HOME}/src/spew/headlines/headline"
 
 
+
 alias ll="ls -lh"
 alias lll="ls -alht"
 
-# Tree
 alias td="tree -d"
 alias tl="tree -pugshF"
+
+alias lb="lsblk -o NAME,KNAME,MOUNTPOINT,SIZE,MODEL,FSSIZE,FSAVAIL"

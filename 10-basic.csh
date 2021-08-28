@@ -33,3 +33,5 @@ alias lll "ls -alht"
 # Tree
 alias td "tree -d"
 alias tl "tree -pugshF"
+
+alias lb="lsblk -o NAME,KNAME,MOUNTPOINT,SIZE,MODEL,FSSIZE,FSAVAIL"
