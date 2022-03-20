@@ -8,7 +8,7 @@
 # If keychain is anywhere in the path, use it.
 
 eval `[ -n "$(type -t keychain)" -a -t 0 ] \
-     && keychain --quiet --eval id_rsa --timeout 600 \
+     && keychain --quiet --noask --eval id_rsa --timeout 600 \
      || true`
 
 
