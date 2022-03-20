@@ -24,3 +24,6 @@ alias tl="tree -pugshF"
 alias lb="lsblk -o NAME,KNAME,MOUNTPOINT,SIZE,MODEL,FSSIZE,FSAVAIL"
 
 alias rehash="hash -r"
+
+# Print the most-recent file in the hole.
+alias 1hole="ls -t ${HOME}/hole | head -1"
