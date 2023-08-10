@@ -27,3 +27,6 @@ alias rehash="hash -r"
 
 # Print the most-recent file in the hole.
 alias 1hole="ls -t ${HOME}/hole | head -1"
+
+# Show a clock.  Handy for keeping SSH sessions open.
+alias idle='while true; do date '\''+ %H:%M'\'' | tr '\''\n'\'' '\''\r'\'' ; sleep 1 ; done'
